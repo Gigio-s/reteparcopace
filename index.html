@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== METADATI SEO OTTIMIZZATI ===== -->
+    <title>Parco della Pace Vicenza - Eventi e Storia</title>
+    <meta name="description" content="Scopri l'evento di inaugurazione del Parco della Pace di Vicenza il 27-28 settembre e rivivi la storia degli eventi che ci hanno portato fin qui.">
+    <meta name="keywords" content="Inaugurazione Parco della Pace Vicenza, eventi parco Vicenza, storia parco, Rete Parco Pace, No Dal Molin, eventi passati Vicenza">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="canonical" href="https://www.reteparcopace.it/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "Inaugurazione Parco della Pace",
+      "startDate": "2025-09-27T09:00:00+02:00",
+      "endDate": "2025-09-28T19:00:00+02:00",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "Parco della Pace",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Vicenza",
+          "addressCountry": "IT"
+        }
+      },
+      "image": [
+        "https://www.reteparcopace.it/img/immagine-27.jpg"
+      ],
+      "description": "Due giorni di festa per inaugurare il Parco della Pace di Vicenza. Un ricco programma di attività sportive, ambientali, sociali e culturali per tutte le età.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "Associazione Rete Parco Pace",
+        "url": "https://www.reteparcopace.it/"
+      }
+    }
+    </script>
+    
+    <style>
+        /* =============================================== */
+        /* ===== ROOT VARIABLES & GLOBAL STYLES V2.0 ===== */
+        /* =============================================== */
+        :root {
+            --primary-green: #2C5F2D;
+            --secondary-green: #97BC62;
+            --dark-text: #333333;
+            --light-bg: #FCFDFB;
+            --accent-bg: #F7F9F7;
+            --border-color: #eef0eb;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --smooth-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --border-radius: 12px;
+            --shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+        body { font-family: var(--font-body); background-color: var(--light-bg); color: var(--dark-text); line-height: 1.7; }
+        body.menu-is-open { overflow: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        h2, h3, h4 { font-family: var(--font-heading); color: var(--primary-green); }
+        h2 { font-size: clamp(2.5rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.3; margin-bottom: 24px; text-align: center; }
+        h3 { font-size: clamp(1.6rem, 4vw, 1.9rem); margin-bottom: 20px; }
+        h4 { font-size: 1.4rem; margin-bottom: 16px; }
+        h5 { font-family: var(--font-heading); font-size: 1.1rem; color: var(--primary-green); margin-top: 16px; margin-bottom: 8px; }
+        a { color: var(--secondary-green); text-decoration: none; transition: color 0.3s var(--smooth-ease); }
+        a:hover { color: var(--primary-green); }
+        .section-intro { max-width: 750px; margin: 0 auto 60px auto; font-size: 1.1rem; text-align: center; line-height: 1.8; }
+        .text-center { text-align: center; }
+        
+        /* ============================ */
+        /* ===== HEADER & NAVIGATION ===== */
+        /* ============================ */
+        .main-header { position: fixed; top: 0; left: 0; width: 100%; padding: 20px 0; z-index: 1000; transition: background-color 0.4s var(--smooth-ease), padding 0.4s var(--smooth-ease), box-shadow 0.4s var(--smooth-ease); }
+        .main-header.scrolled { background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 15px 0; box-shadow: var(--shadow-sm); border-bottom: 1px solid var(--border-color); }
+        .main-header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo-container { display: flex; align-items: center; text-decoration: none; overflow: hidden; }
+        .logo-image { height: 50px; width: 0; opacity: 0; margin-right: 0; transition: width 0.4s var(--smooth-ease), opacity 0.3s var(--smooth-ease), margin-right 0.4s var(--smooth-ease); }
+        .logo-text { font-family: var(--font-heading); font-weight: 900; font-size: 1.8rem; transition: color 0.4s var(--smooth-ease); }
+        .main-header:not(.scrolled) .logo-text { color: var(--light-bg); }
+        .main-header.scrolled .logo-text { color: var(--primary-green); }
+        .main-header.scrolled .logo-image { width: 50px; opacity: 1; margin-right: 15px; }
+        .main-nav ul { list-style: none; display: flex; gap: 35px; }
+        .main-nav a { font-weight: 700; font-size: 1rem; position: relative; padding-bottom: 6px; }
+        .main-header:not(.scrolled) .main-nav a { color: var(--light-bg); }
+        .main-header.scrolled .main-nav a { color: var(--dark-text); }
+        .main-nav a:hover { color: var(--secondary-green); }
+        .main-nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 3px; background-color: var(--secondary-green); transition: width 0.4s var(--smooth-ease); border-radius: 2px; }
+        .main-nav a:hover::after { width: 100%; }
+        
+        /* =================== */
+        /* ===== HERO SECTION ===== */
+        /* =================== */
+        .hero { min-height: 100vh; background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('img/alto.jpg'); background-size: cover; background-position: center; display: flex; justify-content: center; align-items: center; text-align: center; color: white; padding: 20px; }
+        .hero-content { max-width: 850px; }
+        .hero h1 { font-family: var(--font-heading); font-size: clamp(3rem, 8vw, 5rem); font-weight: 900; margin-bottom: 20px; line-height: 1.2; text-shadow: 0 3px 10px rgba(0,0,0,0.3); }
+        .hero p { font-size: 1.3rem; margin-bottom: 40px; font-weight: 400; }
+        .cta-button { display: inline-block; padding: 12px 30px; background-color: var(--secondary-green); color: white !important; text-decoration: none; font-weight: 700; border-radius: 50px; transition: all 0.3s var(--smooth-ease); border: 2px solid transparent; cursor: pointer; white-space: nowrap; }
+        .cta-button:hover { background-color: var(--primary-green); transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        
+        /* ======================== */
+        /* ===== CONTENT SECTIONS ===== */
+        /* ======================== */
+        .content-section { padding: 120px 0; }
+        .content-section.bg-light-gray { background-color: var(--accent-bg); }
+
+        /* ===== STYLES FOR EVENTS GRID ===== */
+        .events-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
+            gap: 35px; 
+        }
+        .event-card { 
+            background-color: #fff; 
+            border-radius: var(--border-radius); 
+            overflow: hidden; 
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s var(--smooth-ease), box-shadow 0.3s var(--smooth-ease); 
+            text-align: left; 
+        }
+        .event-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: var(--shadow-md); 
+        }
+        .event-card img { 
+            width: 100%; 
+            height: 220px; 
+            object-fit: cover; 
+            display: block; 
+        }
+        .event-card-caption { 
+            padding: 30px 25px; 
+        }
+        .event-card-caption h4 { 
+            font-size: 1.5rem; 
+        }
+        .event-card-caption .date { 
+            font-size: 0.9rem; 
+            color: #888; 
+            margin-bottom: 10px; 
+            font-weight: 700;
+        }
+        /* Style for hidden extra events */
+        .event-card-extra {
+            display: none;
+        }
+
+        /* ----- Sezione Progetto ----- */
+        #progetto .project-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; margin-bottom: 100px; }
+        #progetto .project-layout:last-of-type { margin-bottom: 0; }
+        #progetto .project-layout img { width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow-md); display: block; }
+        #progetto .project-layout p { margin-bottom: 15px; line-height: 1.8; }
+        #progetto blockquote { border-left: 5px solid var(--secondary-green); padding-left: 30px; margin: 25px 0; font-style: italic; font-size: 1.3rem; font-family: var(--font-heading); color: var(--primary-green); line-height: 1.6; }
+        .thematic-areas-section { margin-top: 100px; text-align: center; }
+        .thematic-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: left; margin-top: 50px; }
+        .thematic-item { background-color: #fff; padding: 35px; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); transition: transform 0.3s var(--smooth-ease), box-shadow 0.3s var(--smooth-ease); }
+        .thematic-item:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
+        .thematic-item .icon { color: var(--primary-green); margin-bottom: 20px; }
+        .thematic-item h4 { font-size: 1.5rem; }
+        .call-to-action-box { background: linear-gradient(45deg, var(--primary-green), #4a7d4a); color: var(--light-bg); padding: 60px; border-radius: var(--border-radius); margin: 100px auto 0 auto; max-width: 850px; text-align: center; box-shadow: var(--shadow-md); }
+        .call-to-action-box h3 { color: #fff; font-size: 2rem; }
+        .call-to-action-box .cta-button { margin-top: 25px; background-color: #fff; color: var(--primary-green) !important; }
+        .call-to-action-box .cta-button:hover { background-color: var(--secondary-green); color: #fff !important; box-shadow: none; }
+        
+        /* ===== NUOVI STILI SEZIONE DOCUMENTI ===== */
+        .document-list { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 25px; 
+            max-width: 900px; 
+            margin: 0 auto; 
+        }
+        .document-item { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background-color: #fff;
+            padding: 25px 30px; 
+            border-radius: var(--border-radius); 
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s var(--smooth-ease), box-shadow 0.3s var(--smooth-ease);
+        }
+        .document-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        .document-item-info h3 { 
+            font-size: 1.6rem; 
+            margin-bottom: 8px; 
+        }
+        .document-item-info p { 
+            margin: 0; 
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* ================= */
+        /* ===== FOOTER ===== */
+        /* ================= */
+        .main-footer { background-color: var(--dark-text); color: #f0f0f0; padding: 80px 0; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; text-align: left; }
+        .footer-col h4 { font-family: var(--font-heading); font-size: 1.5rem; color: var(--light-bg); margin-bottom: 20px; position: relative; padding-bottom: 10px; }
+        .footer-col h4::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background-color: var(--secondary-green); border-radius: 2px; }
+        .footer-col p { color: #ccc; margin-bottom: 10px; }
+        .footer-contact-item { display: flex; align-items: flex-start; gap: 12px; margin-top: 15px; color: #ccc; }
+        .footer-contact-item.email-link { align-items: center; color: var(--secondary-green); }
+        .footer-contact-item .footer-icon { width: 18px; height: 18px; flex-shrink: 0; stroke: var(--secondary-green); margin-top: 4px; }
+        .footer-contact-item.email-link .footer-icon { margin-top: 0; }
+        .footer-contact-item.email-link:hover { color: #fff; }
+        
+        .footer-copyright { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #444; font-size: 0.9rem; color: #aaa; }
+        .website-credit { margin-top: 8px; font-size: 0.85rem; color: #999; }
+        .website-credit a { color: var(--secondary-green); text-decoration: none; }
+        .website-credit a:hover { color: #fff; text-decoration: underline; }
+        
+        .footer-col .footer-links a {
+            font-size: 1.1rem;
+            color: var(--secondary-green);
+            display: block;
+            margin-top: 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .footer-col .footer-links a:hover {
+            color: #fff;
+            transform: translateX(5px);
+        }
+
+        /* ================================ */
+        /* ===== ANIMATIONS & UTILITIES ===== */
+        /* ================================ */
+        .hidden { opacity: 0; transform: translateY(30px); transition: opacity 0.8s var(--smooth-ease), transform 0.8s var(--smooth-ease); }
+        .show { opacity: 1; transform: translateY(0); }
+        .events-grid .hidden:nth-child(2), .thematic-grid .hidden:nth-child(2) { transition-delay: 0.1s; }
+        .events-grid .hidden:nth-child(3), .thematic-grid .hidden:nth-child(3) { transition-delay: 0.2s; }
+        .events-grid .hidden:nth-child(4), .thematic-grid .hidden:nth-child(4) { transition-delay: 0.3s; }
+        .events-grid .hidden:nth-child(5) { transition-delay: 0.4s; }
+        .document-list .hidden:nth-child(2) { transition-delay: 0.15s; }
+        .document-list .hidden:nth-child(3) { transition-delay: 0.25s; }
+        .document-list .hidden:nth-child(4) { transition-delay: 0.35s; }
+
+        /* ========================= */
+        /* ===== MOBILE & TABLET ===== */
+        /* ========================= */
+        .hamburger-menu { display: none; width: 30px; height: 25px; flex-direction: column; justify-content: space-between; cursor: pointer; background: none; border: none; z-index: 1010; }
+        .hamburger-menu span { display: block; width: 100%; height: 3px; background-color: var(--light-bg); border-radius: 3px; transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease; }
+        .main-header.scrolled .hamburger-menu span { background-color: var(--primary-green); }
+        .hamburger-menu.active span { background-color: white; }
+        .hamburger-menu.active span:nth-child(1) { transform: translateY(11px) rotate(45deg); }
+        .hamburger-menu.active span:nth-child(2) { opacity: 0; }
+        .hamburger-menu.active span:nth-child(3) { transform: translateY(-11px) rotate(-45deg); }
+
+        @media (max-width: 1024px) {
+            #progetto .project-layout { grid-template-columns: 1fr; gap: 40px; }
+            #progetto .project-layout:nth-child(2) .project-image { grid-row: 1; }
+            .thematic-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            html { scroll-padding-top: 80px; }
+            .content-section { padding: 80px 0; }
+            .hero h1 { font-size: 3rem; }
+            .events-grid, .thematic-grid, .footer-grid { grid-template-columns: 1fr; }
+            
+            .hamburger-menu { display: flex; }
+            body.menu-is-open .logo-container { position: relative; z-index: 1010; }
+            body.menu-is-open .logo-text { color: var(--light-bg); }
+            
+            .main-nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: var(--primary-green);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                visibility: hidden;
+                transform: scale(0.95);
+                transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+                z-index: 1005;
+            }
+            .main-nav.mobile-open { opacity: 1; visibility: visible; transform: scale(1); }
+            .main-nav ul {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+            .main-nav a {
+                color: white;
+                font-size: clamp(1.5rem, 6vw, 1.8rem);
+                font-family: var(--font-heading);
+                opacity: 0;
+                transform: translateY(10px);
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+            .main-nav a:hover { color: white; opacity: 0.8; }
+            .main-nav a::after { display: none; }
+            .main-nav.mobile-open a { opacity: 1; transform: translateY(0); }
+            .main-nav.mobile-open li:nth-child(1) a { transition-delay: 0.1s; }
+            .main-nav.mobile-open li:nth-child(2) a { transition-delay: 0.15s; }
+            .main-nav.mobile-open li:nth-child(3) a { transition-delay: 0.2s; }
+            .main-nav.mobile-open li:nth-child(4) a { transition-delay: 0.25s; }
+            .main-nav.mobile-open li:nth-child(5) a { transition-delay: 0.3s; }
+
+            .document-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header" id="main-header">
+        <div class="container">
+            <a href="#home" class="logo-container">
+                <img src="img/logo.png" class="logo-image" alt="Logo Rete Parco Pace Vicenza">
+                <span class="logo-text">Rete Parco Pace</span>
+            </a>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#eventi">Eventi</a></li>
+                    <li><a href="#progetto">Chi siamo</a></li>
+                    <li><a href="#documenti">Documenti</a></li>
+                    <li><a href="#contatti">Contatti</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="Apri menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content hidden">
+                <h1>Il Parco della Pace</h1>
+                <p>Un bene comune a Vicenza: ricco di natura, sport, nonviolenza.</p>
+                <a href="#eventi" class="cta-button">Scopri i nostri eventi</a>
+            </div>
+        </section>
+
+        <!-- ===== SEZIONE EVENTI ===== -->
+        <section class="content-section" id="eventi">
+            <div class="container">
+                <h2 class="hidden">I Nostri Eventi</h2>
+                <p class="section-intro hidden">Dall'inaugurazione ufficiale ai momenti storici che hanno definito il nostro percorso, scopri gli eventi che raccontano la storia e il futuro del Parco della Pace.</p>
+                
+                <div class="events-grid">
+                    <!-- CARD INAUGURAZIONE -->
+                    <div class="event-card hidden">
+                        <img src="img/immagine 27.jpg" alt="Festa di inaugurazione al Parco della Pace">
+                        <div class="event-card-caption">
+                            <h4>Grande Inaugurazione del Parco</h4>
+                            <p class="date">27 e 28 Settembre</p>
+                            <p>Due giorni di festa con sport, natura, musica e attività per tutti per aprire finalmente le porte del Parco alla città.</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD STORICHE (Prime 2 visibili) -->
+                    <div class="event-card hidden">
+                        <img src="img/WhatsApp Image 2025-07-13 at 13.16.21 (1).jpeg" alt="Volontari al lavoro durante una giornata ecologica al parco">
+                        <div class="event-card-caption">
+                            <h4>Apriti parco</h4>
+                            <p class="date">16 dicembre 2023</p>
+                            <p>Primo convegno organizzato dalla rete per immaginare il futuro del parco.</p>
+                        </div>
+                    </div>
+                    <div class="event-card hidden">
+                        <img src="img/WhatsApp Image 2025-07-13 at 13.16.22 (1).jpeg" alt="Concerto al tramonto svoltosi al Parco della Pace di Vicenza">
+                        <div class="event-card-caption">
+                            <h4>I parchi di Milano</h4>
+                            <p>Ci siamo recati a Milano per confrontarci con le associazioni che gestiscono parchi analoghi al nostro.</p>
+                        </div>
+                    </div>
+
+                    <!-- CARD EXTRA (Nascoste di default) -->
+                    <div class="event-card hidden event-card-extra">
+                        <img src="img/WhatsApp Image 2025-07-13 at 13.16.26 (1).jpeg" alt="Attività sportiva di gruppo al Parco della Pace">
+                        <div class="event-card-caption">
+                            <h4>La marcia mondiale</h4>
+                            <p class="date">Giugno 2024</p>
+                            <p>La rete ha collaborato al passaggio della "3ª Marcia Mondiale per la Pace e la Nonviolenza" al parco.</p>
+                        </div>
+                    </div>
+                    <div class="event-card hidden event-card-extra">
+                        <img src="img/WhatsApp Image 2025-07-13 at 13.16.25.jpeg" alt="Celebrazione comunitaria nel parco">
+                        <div class="event-card-caption">
+                            <h4>Appello alla Nonviolenza</h4>
+                            <p>Simbolo realizzato insieme al scout CNGEI durante un torneo nazionale "baccala d'oro".</p>
+                        </div>
+                    </div>
+                    <div class="event-card hidden event-card-extra">
+                        <img src="img/WhatsApp Image 2025-07-13 at 13.16.24 (1).jpeg" alt="Un momento di un evento passato al parco">
+                        <div class="event-card-caption">
+                            <h4>Nascita della rete</h4>
+                            <p class="date">24 novembre 2024</p>
+                            <p>Nascita formale della nostra rete di associazioni.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center hidden" style="margin-top: 50px;">
+                    <button id="toggle-events-btn" class="cta-button">Mostra la storia completa</button>
+                </div>
+
+            </div>
+        </section>
+        
+        <section class="content-section bg-light-gray" id="progetto">
+            <div class="container">
+                <div class="project-layout">
+                    <div class="project-image hidden"><img src="img/0.jpg" alt="Immagine storica del movimento No Dal Molin a Vicenza"></div>
+                    <div class="project-text hidden">
+                        <h3>La nostra storia</h3>
+                        <blockquote>Il Parco della Pace di Vicenza non è un dono calato dall’alto, ma una conquista civica.</blockquote>
+                        <p>La sua esistenza nasce da lungo percorso di impegno e mobilitazione profondamente radicata nel territorio. Tra il 2005 e il 2010, il <strong>movimento No Dal Molin</strong> si oppose con determinazione alla costruzione di una base militare statunitense sull’area dell'ex aeroporto, rivendicando un futuro diverso per quello spazio: non un nuovo simbolo di militarizzazione, ma un luogo di pace, natura e incontro.</p>
+                        <p>Quella visione non si è mai spenta e oggi, le stesse energie civiche, raccolte nella Rete Parco Pace, continuano a lavorare affinché quel sogno diventi realtà.</p>
+                    </div>
+                </div>
+                <div class="project-layout">
+                     <div class="project-text hidden">
+                        <p>Nata il 24 novembre 2024, la rete riunisce più di venti associazioni e diversi cittadini. Il nostro obiettivo è trasformare i 65 ettari del Parco in un luogo vivo, inclusivo e generativo.</p>
+                        <p>Vogliamo creare un laboratorio di relazioni, cultura e natura in cui sperimentare concretamente il benessere, la sostenibilità, la pace e l’inclusione sociale. Il Parco della Pace è molto più di uno spazio verde: è la memoria vivente di una mobilitazione popolare che ha saputo immaginare un’altra città.</p>
+                    </div>
+                    <div class="project-image hidden"><img src="img/WhatsApp Image 2025-07-13 at 13.16.21 (1).jpeg" alt="Gruppo di persone della Rete Parco Pace riunite nel parco"></div>
+                </div>
+                <div class="thematic-areas-section hidden">
+                    <h3>Le nostre aree tematiche</h3>
+                    <p class="section-intro" style="margin-bottom: 40px;">Ci siamo organizzati in quattro aree tematiche per rendere più efficace la nostra azione:</p>
+                    
+                    <div class="thematic-grid">
+                        <div class="thematic-item hidden">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M7 20h10"/><path d="M12 20V4"/><path d="M12 4h.01"/><path d="M12 4c-2 0-4 1-4 4v1c0 1.1.9 2 2 2h4c1.1 0 2-.9 2-2V8c0-3-2-4-4-4z"/>
+                                </svg>
+                            </div>
+                            <h4>Ambiente e natura</h4>
+                            <p>L'area del parco è di particolare valore ambientale ed è nostro intento promuoverla e proteggerla.</p>
+                        </div>
+                        <div class="thematic-item hidden">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M15 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/><path d="M12 8.5V14"/><path d="m8 14 1 5h6l1-5"/><path d="m6 11 2 3"/><path d="m18 11-2 3"/>
+                                </svg>
+                            </div>
+                            <h4>Sport</h4>
+                            <p>Valorizziamo lo sport come strumento di salute, divertimento e inclusione.</p>
+                        </div>
+                        <div class="thematic-item hidden">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 17c-1.1 0-2 .9-2 2a2 2 0 1 0-4 0c0-1.1-.9-2-2-2"/><path d="M6 15c-1.1 0-2 .9-2 2a2 2 0 1 0-4 0c0-1.1-.9-2-2-2"/><path d="m18 15-2-3"/><path d="m6 12 2-3"/><path d="M12 3a6 6 0 0 0-6 6c0 1.7.7 3.2 1.8 4.2"/><path d="M12 21a6 6 0 0 0 6-6c0-1.7-.7-3.2-1.8-4.2"/>
+                                </svg>
+                            </div>
+                            <h4>Nonviolenza, sociale e giovani</h4>
+                            <p>Sosteniamo attività educative e ricreative per giovani e adulti. Educando alla nonviolenza.</p>
+                        </div>
+                        <div class="thematic-item hidden">
+                            <div class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/>
+                                </svg>
+                            </div>
+                            <h4>Liberi Cittadini</h4>
+                            <p>Uno spazio aperto a chi vuole impegnarsi attivamente per un Parco condiviso.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="call-to-action-box hidden">
+                    <h3>Vuoi partecipare alle nostre iniziative?</h3>
+                    <p>L’Associazione, intende valorizzare il Parco della Pace di Vicenza perché possa diventare 
+uno spazio condiviso ricco di natura, di relazioni e di sport. Una realtà preziosa per il 
+benessere psicofisico della comunità vicentina<p>
+                    <a href="mailto:reteparcopace@gmail.com" class="cta-button">Unisciti a noi</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===== SEZIONE DOCUMENTI (MODIFICATA) ===== -->
+        <section class="content-section" id="documenti">
+            <div class="container">
+                <div class="hidden">
+                    <h2>Trasparenza e Documenti</h2>
+                    <p class="section-intro">Crediamo in un operato chiaro e accessibile. Qui puoi consultare i documenti ufficiali che definiscono la nostra identità e la nostra gestione.</p>
+                </div>
+                <div class="document-list">
+                    <div class="document-item hidden">
+                        <div class="document-item-info">
+                            <h3>Manifesto</h3>
+                            <p>I principi e i valori che guidano il nostro impegno.</p>
+                        </div>
+                        <a href="docs/manifestorete.pdf" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Leggi il Manifesto della Rete Parco Pace">Leggi</a>
+                    </div>
+                    <div class="document-item hidden">
+                        <div class="document-item-info">
+                            <h3>Statuto Associazione</h3>
+                            <p>Il documento ufficiale che regola la vita della Rete Parco Pace.</p>
+                        </div>
+                        <a href="docs/STATUTO finale 24 novembre 2024 per WEB.pdf" target="_blank" rel="noopener noreferrer" class="cta-button" aria-label="Scarica lo Statuto dell'Associazione in formato PDF">Scarica PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer" id="contatti">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Associazione Rete Parco Pace</h4>
+                    <p>La rete riunisce più di venti associazioni e diversi cittadini impegnati per rendere il Parco della Pace un bene comune vivo e partecipato.</p>
+                    <p>Codice Fiscale: 95156440240</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Sede Legale e Contatti</h4>
+                    <div class="footer-contact-item">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <span>Via Paolina Porto Godi 2<br>36100 Vicenza</span>
+                    </div>
+                    <a href="mailto:reteparcopace@gmail.com" class="footer-contact-item email-link">
+                        <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <span>reteparcopace@gmail.com</span>
+                    </a>
+                </div>
+                <div class="footer-col">
+                    <h4>Link Utili</h4>
+                    <div class="footer-links">
+                        <a href="#eventi">Eventi & Storia</a>
+                        <a href="#progetto">Chi siamo</a>
+                        <a href="#documenti">Documenti</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2025 Associazione Rete Parco Pace. Tutti i diritti riservati.</p>
+                <p class="website-credit">Website by Ariel Michelin, <a href="mailto:arielliam2008@gmail.com">contattami</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('main-header');
+            const hiddenElements = document.querySelectorAll('.hidden');
+            const hamburger = document.getElementById('hamburger-menu');
+            const navMenu = document.getElementById('main-nav');
+            const navLinks = navMenu.querySelectorAll('a');
+            const body = document.body;
+
+            // ===== Scroll & Animation observers =====
+            window.addEventListener('scroll', () => {
+                header.classList.toggle('scrolled', window.scrollY > 50);
+            });
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) { 
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            hiddenElements.forEach(el => observer.observe(el));
+
+            // ===== Mobile Menu Logic =====
+            const toggleMenu = () => {
+                const isMenuOpen = body.classList.toggle('menu-is-open');
+                hamburger.classList.toggle('active', isMenuOpen);
+                navMenu.classList.toggle('mobile-open', isMenuOpen);
+                hamburger.setAttribute('aria-label', isMenuOpen ? 'Chiudi menu' : 'Apri menu');
+            };
+
+            hamburger.addEventListener('click', toggleMenu);
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (body.classList.contains('menu-is-open')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // ===== LOGICA PER MOSTRARE ALTRI EVENTI =====
+            const toggleBtn = document.getElementById('toggle-events-btn');
+            const extraEvents = document.querySelectorAll('.event-card-extra');
+            
+            if (toggleBtn && extraEvents.length > 0) {
+                let areEventsExpanded = false;
+
+                toggleBtn.addEventListener('click', () => {
+                    areEventsExpanded = !areEventsExpanded; // Inverti lo stato
+
+                    extraEvents.forEach(card => {
+                        // Mostra o nascondi le card in base allo stato
+                        card.style.display = areEventsExpanded ? 'block' : 'none';
+                    });
+
+                    // Aggiorna il testo del pulsante
+                    toggleBtn.textContent = areEventsExpanded ? 'Mostra meno' : 'Mostra la storia completa';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
