@@ -3,3 +3,7 @@ User-agent: MSNBot
 Crawl-delay: 5
 User-agent: bingbot
 Crawl-delay: 5
+User-agent: *
+Allow: /
+
+Sitemap: https://www.reteparcopace.it/sitemap.xml

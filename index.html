@@ -55,6 +55,23 @@
         },
         "email": "reteparcopace@gmail.com",
         "areaServed": { "@type": "City", "name": "Vicenza" }
+      },
+      {
+        "@type": "Place",
+        "name": "InfoPoint Rete Parco Pace",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Strada Sant'Antonino, 59",
+          "addressLocality": "Vicenza",
+          "postalCode": "36100",
+          "addressRegion": "VI",
+          "addressCountry": "IT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.5714369,
+          "longitude": 11.5337247
+        }
       }
     ]
   }
@@ -124,6 +141,37 @@
     }
     .main-nav a:hover::after { width: 100%; }
     .nav-partner-link { color: var(--secondary-green) !important; }
+
+    /* Dropdown "Scopri" nel menu */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-toggle {
+      background: none; border: none; cursor: pointer; font-family: inherit;
+      font-weight: 700; font-size: 0.95rem; padding: 0 0 6px; margin: 0;
+      display: inline-flex; align-items: center; gap: 5px;
+    }
+    .main-header:not(.scrolled) .nav-dropdown-toggle { color: var(--light-bg); }
+    .main-header.scrolled     .nav-dropdown-toggle   { color: var(--dark-text); }
+    .nav-dropdown-toggle:hover { color: var(--secondary-green); }
+    .nav-dropdown-arrow { font-size: 0.7rem; transition: transform 0.25s var(--smooth-ease); }
+    .nav-dropdown.open .nav-dropdown-arrow { transform: rotate(180deg); }
+    .nav-dropdown-menu {
+      list-style: none; display: flex !important; flex-direction: column !important; align-items: stretch;
+      position: absolute; top: 100%; left: 50%;
+      transform: translateX(-50%) translateY(6px);
+      background: white; border: 1px solid var(--border-color); border-radius: 12px;
+      box-shadow: var(--shadow-md); padding: 10px; min-width: 190px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.22s var(--smooth-ease), transform 0.22s var(--smooth-ease);
+      z-index: 1001;
+    }
+    .nav-dropdown.open .nav-dropdown-menu { opacity: 1; pointer-events: all; transform: translateX(-50%) translateY(2px); }
+    .nav-dropdown-menu li + li { margin-top: 2px; }
+    .nav-dropdown-menu a {
+      display: block; padding: 9px 14px; border-radius: 8px;
+      color: var(--dark-text) !important; font-weight: 600; font-size: 0.92rem;
+    }
+    .nav-dropdown-menu a::after { content: none; }
+    .nav-dropdown-menu a:hover { background: var(--accent-bg); color: var(--primary-green) !important; }
     .header-social { display: flex; align-items: center; gap: 12px; margin-left: 28px; }
     .header-social a {
       display: inline-flex; align-items: center; justify-content: center;
@@ -222,6 +270,20 @@
     .call-to-action-box p  { opacity: 0.9; }
     .call-to-action-box .cta-button { margin-top: 25px; background-color: white; color: var(--primary-green) !important; }
     .call-to-action-box .cta-button:hover { background-color: var(--secondary-green); color: white !important; box-shadow: none; }
+
+    /* InfoPoint */
+    .infopoint-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .infopoint-info h2 { text-align: left; }
+    .infopoint-list { list-style: none; margin: 20px 0 30px; }
+    .infopoint-list li { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 16px; }
+    .infopoint-list .ip-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .infopoint-note { display: block; font-size: 0.82rem; color: #888; font-style: italic; margin-top: 4px; }
+    .infopoint-map { border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); }
+    .infopoint-map iframe { width: 100%; height: 380px; border: 0; display: block; }
+    @media (max-width: 1024px) {
+      .infopoint-layout { grid-template-columns: 1fr; gap: 30px; }
+      .infopoint-map iframe { height: 300px; }
+    }
 
     /* Documents */
     .document-list { display: flex; flex-direction: column; gap: 20px; }
@@ -437,6 +499,7 @@
       /* Sul menu mobile (sfondo verde pieno) il testo deve restare sempre bianco,
          anche con header "scrolled" (che su desktop lo vorrebbe scuro). */
       .main-header.scrolled .main-nav a { color: white; }
+      .main-header.scrolled .nav-dropdown-toggle { color: white; }
       .main-nav a:hover { color: white; opacity: 0.8; }
       .main-nav a::after { display: none; }
       .main-nav.mobile-open a { opacity: 1; transform: translateY(0); }
@@ -446,6 +509,20 @@
       .main-nav.mobile-open li:nth-child(4) a { transition-delay: 0.25s; }
       .main-nav.mobile-open li:nth-child(5) a { transition-delay: 0.30s; }
       .main-nav.mobile-open li:nth-child(6) a { transition-delay: 0.35s; }
+      .main-nav.mobile-open li:nth-child(7) a { transition-delay: 0.40s; }
+      .nav-dropdown-toggle { color: white; font-size: clamp(1.5rem, 6vw, 1.8rem); font-family: var(--font-heading); opacity: 0; transform: translateY(10px); transition: opacity 0.3s, transform 0.3s; justify-content: center; width: 100%; }
+      .main-nav.mobile-open .nav-dropdown-toggle { opacity: 1; transform: translateY(0); }
+      .nav-dropdown-menu {
+        position: static; transform: none; opacity: 1; pointer-events: auto;
+        background: transparent; border: none; box-shadow: none; padding: 0;
+        max-height: 0; overflow: hidden; margin-top: 0; min-width: 0;
+        align-items: center; width: 100%;
+        transition: max-height 0.3s var(--smooth-ease), margin-top 0.3s var(--smooth-ease);
+      }
+      .nav-dropdown.open .nav-dropdown-menu { max-height: 400px; margin-top: 18px; }
+      .nav-dropdown-menu li + li { margin-top: 14px; }
+      .nav-dropdown-menu a { color: white !important; text-align: center; font-family: var(--font-heading); font-size: 1.25rem; padding: 0; }
+      .nav-dropdown-menu a:hover { background: none; color: white !important; opacity: 0.8; }
     }
   </style>
 </head>
@@ -463,9 +540,17 @@
       <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="eventi.html">Eventi</a></li>
-          <li><a href="#progetto">Chi siamo</a></li>
-          <li><a href="#documenti">Documenti</a></li>
+          <li class="nav-dropdown" id="navDropdown">
+            <button type="button" class="nav-dropdown-toggle" id="navDropdownToggle" aria-haspopup="true" aria-expanded="false" aria-controls="navDropdownMenu">
+              Scopri <span class="nav-dropdown-arrow" aria-hidden="true">▾</span>
+            </button>
+            <ul class="nav-dropdown-menu" id="navDropdownMenu">
+              <li><a href="eventi.html">Eventi</a></li>
+              <li><a href="#progetto">Chi siamo</a></li>
+              <li><a href="#infopoint">Dove siamo</a></li>
+              <li><a href="#documenti">Documenti</a></li>
+            </ul>
+          </li>
           <li><a href="#partner" class="nav-partner-link">Partner</a></li>
           <li><a href="#contatti">Contatti</a></li>
         </ul>
@@ -474,7 +559,7 @@
         <a href="https://www.facebook.com/p/Parco-della-Pace-Vicenza-61581370802694/" target="_blank" aria-label="Seguici su Facebook" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
-        <a href="#" aria-label="Seguici su LinkedIn" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/company/associazione-rete-parco-pace/" target="_blank" aria-label="Seguici su LinkedIn" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
         </a>
         <a href="#" aria-label="Seguici su Instagram" rel="noopener noreferrer">
@@ -567,13 +652,34 @@
             <a href="https://www.facebook.com/p/Parco-della-Pace-Vicenza-61581370802694/" target="_blank" class="social-btn" aria-label="Seguici su Facebook" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook
             </a>
-            <a href="#" class="social-btn" aria-label="Seguici su LinkedIn" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/associazione-rete-parco-pace/" target="_blank" class="social-btn" aria-label="Seguici su LinkedIn" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn
             </a>
             <a href="#" class="social-btn" aria-label="Seguici su Instagram" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" style="fill:none;stroke:currentColor;stroke-width:2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" style="stroke:currentColor;stroke-width:2;stroke-linecap:round"/></svg>Instagram
             </a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFOPOINT -->
+  <section class="content-section" id="infopoint" aria-labelledby="h-infopoint">
+    <div class="container">
+      <div class="infopoint-layout hidden">
+        <div class="infopoint-info">
+          <h2 id="h-infopoint">Vieni a trovarci: l'InfoPoint del Parco</h2>
+          <p>All'interno del Parco della Pace trovi il nostro InfoPoint, il punto di riferimento per informazioni, materiali e per conoscere da vicino le attività della rete.</p>
+          <ul class="infopoint-list">
+            <li><span class="ip-icon" aria-hidden="true">📍</span><span>Strada Sant'Antonino, 59 – 36100 Vicenza (VI)</span></li>
+            <li><span class="ip-icon" aria-hidden="true">🕒</span><span>Domenica: 08:00 – 18:00</span></li>
+            <li><span class="ip-icon" aria-hidden="true">☀️</span><span>Luglio e Agosto: 08:00 – 12:00<span class="infopoint-note">Chiuso in caso di caldo eccessivo</span></span></li>
+          </ul>
+          <a href="https://www.google.com/maps/place/InfoPoint+Rete+Parco+Pace/@45.5714369,11.5337247,17z" target="_blank" rel="noopener noreferrer" class="cta-button">Indicazioni stradali</a>
+        </div>
+        <div class="infopoint-map">
+          <iframe src="https://www.google.com/maps?q=InfoPoint+Rete+Parco+Pace,+Strada+Sant%27Antonino+59,+36100+Vicenza+VI&output=embed" title="Mappa InfoPoint Rete Parco Pace" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -664,7 +770,7 @@
             <a href="https://www.facebook.com/p/Parco-della-Pace-Vicenza-61581370802694/" target="_blank" class="social-btn" aria-label="Seguici su Facebook" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook
             </a>
-            <a href="#" class="social-btn" aria-label="Seguici su LinkedIn" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/associazione-rete-parco-pace/" target="_blank" class="social-btn" aria-label="Seguici su LinkedIn" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>LinkedIn
             </a>
             <a href="#" class="social-btn" aria-label="Seguici su Instagram" rel="noopener noreferrer">
@@ -677,6 +783,7 @@
           <div class="footer-links">
             <a href="eventi.html">Eventi &amp; Storia</a>
             <a href="#progetto">Chi siamo</a>
+            <a href="#infopoint">Dove siamo</a>
             <a href="#documenti">Documenti</a>
             <a href="#partner">I nostri partner</a>
           </div>
@@ -728,12 +835,20 @@
       /* 3. Hamburger */
       const hamburger = document.getElementById('hamburger');
       const nav = document.getElementById('main-nav');
+      const navDropdown = document.getElementById('navDropdown');
+      const navDropdownToggle = document.getElementById('navDropdownToggle');
+      const closeNavDropdown = () => {
+        if (!navDropdown) return;
+        navDropdown.classList.remove('open');
+        navDropdownToggle.setAttribute('aria-expanded', 'false');
+      };
       hamburger.addEventListener('click', () => {
         const isOpen = hamburger.classList.toggle('active');
         nav.classList.toggle('mobile-open', isOpen);
         document.body.classList.toggle('menu-is-open', isOpen);
         hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         hamburger.setAttribute('aria-label', isOpen ? 'Chiudi menu' : 'Apri menu di navigazione');
+        if (!isOpen) closeNavDropdown();
       });
       nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
@@ -742,8 +857,24 @@
           document.body.classList.remove('menu-is-open');
           hamburger.setAttribute('aria-expanded', 'false');
           hamburger.setAttribute('aria-label', 'Apri menu di navigazione');
+          closeNavDropdown();
         });
       });
+
+      /* 3bis. Dropdown "Scopri" */
+      if (navDropdown && navDropdownToggle) {
+        navDropdownToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = navDropdown.classList.toggle('open');
+          navDropdownToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        document.addEventListener('click', (e) => {
+          if (!navDropdown.contains(e.target)) closeNavDropdown();
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeNavDropdown();
+        });
+      }
 
       /* 4. Scroll animations */
       const observer = new IntersectionObserver((entries) => {
