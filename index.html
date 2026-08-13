@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Parco della Pace Vicenza – Rete Parco Pace | Natura, sport e nonviolenza</title>
-  <meta name="description" content="Rete Parco Pace di Vicenza: 20+ associazioni per i 65 ettari del Parco della Pace. Natura, sport, nonviolenza e inclusione. Scopri eventi e come aderire." />
+  <meta name="description" content="Parco della Pace a Vicenza: orari di apertura, eventi, come arrivare e InfoPoint. La Rete Parco Pace unisce 20+ associazioni per i 65 ettari dell'ex aeroporto. Scopri le attività." />
   <link rel="icon" type="image/png" href="img/logo.png" />
   <link rel="apple-touch-icon" href="img/logo.png" />
-  <link rel="canonical" href="https://www.reteparcopace.it/" />
+  <link rel="canonical" href="https://reteparcopace.it/" />
   <meta name="robots" content="index, follow" />
   <meta name="geo.region"    content="IT-VI" />
   <meta name="geo.placename" content="Vicenza" />
@@ -17,16 +17,16 @@
   <meta name="format-detection" content="telephone=no" />
   <meta property="og:type"        content="website" />
   <meta property="og:locale"      content="it_IT" />
-  <meta property="og:url"         content="https://www.reteparcopace.it/" />
+  <meta property="og:url"         content="https://reteparcopace.it/" />
   <meta property="og:title"       content="Parco della Pace Vicenza – Rete Parco Pace | Natura, sport e nonviolenza" />
   <meta property="og:description" content="20+ associazioni per i 65 ettari del Parco della Pace di Vicenza. Natura, sport, nonviolenza e inclusione." />
-  <meta property="og:image"       content="https://www.reteparcopace.it/img/alto.jpg" />
+  <meta property="og:image"       content="https://reteparcopace.it/img/alto.jpg" />
   <meta property="og:site_name"   content="Rete Parco Pace" />
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Parco della Pace Vicenza – Rete Parco Pace | Natura, sport e nonviolenza" />
   <meta name="twitter:description" content="20+ associazioni per i 65 ettari del Parco della Pace di Vicenza." />
-  <meta name="twitter:image"       content="https://www.reteparcopace.it/img/alto.jpg" />
-  <link rel="preload" as="image" href="https://www.reteparcopace.it/img/alto.jpg" />
+  <meta name="twitter:image"       content="https://reteparcopace.it/img/alto.jpg" />
+  <link rel="preload" as="image" href="https://reteparcopace.it/img/alto.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -37,11 +37,11 @@
     "@graph": [
       {
         "@type": "NGO",
-        "@id": "https://www.reteparcopace.it/#organization",
+        "@id": "https://reteparcopace.it/#organization",
         "name": "Associazione Rete Parco Pace",
         "alternateName": "Rete Parco Pace",
-        "url": "https://www.reteparcopace.it",
-        "logo": "https://www.reteparcopace.it/img/logo.png",
+        "url": "https://reteparcopace.it",
+        "logo": "https://reteparcopace.it/img/logo.png",
         "description": "Rete di più di venti associazioni per la valorizzazione del Parco della Pace di Vicenza.",
         "foundingDate": "2024-11-24",
         "taxID": "95156440240",
@@ -71,7 +71,48 @@
           "@type": "GeoCoordinates",
           "latitude": 45.5714369,
           "longitude": 11.5337247
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Sunday",
+          "opens": "08:00",
+          "closes": "18:00"
         }
+      },
+      {
+        "@type": "Event",
+        "name": "Peace Walk 2026 — Disarmiamoci, evento di apertura",
+        "description": "Evento di apertura del percorso italiano della Peace Walk, al Parco della Pace di Vicenza. Dalle 18:00 alle 21:00: accoglienza dei camminanti internazionali, musica, corteo e installazione della scultura Disarmiamoci. Il 19 agosto la partenza del cammino verso Venezia.",
+        "startDate": "2026-08-18T18:00:00+02:00",
+        "endDate": "2026-08-18T21:00:00+02:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "Parco della Pace — ingresso di via Sant'Antonino, Hangar 2",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via Sant'Antonino, Hangar 2",
+            "addressLocality": "Vicenza",
+            "postalCode": "36100",
+            "addressRegion": "VI",
+            "addressCountry": "IT"
+          }
+        },
+        "image": "https://reteparcopace.it/img/alto.jpg",
+        "organizer": [
+          { "@type": "Organization", "name": "Rete Parco Pace", "url": "https://reteparcopace.it" },
+          { "@type": "Organization", "name": "Casa per la Pace" }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLScHSCPZxeEhlUnzRHn5BEoUa44PyaTQ4Y7S91T_dzL2zcd7eA/viewform",
+          "validFrom": "2026-08-13"
+        },
+        "url": "https://reteparcopace.it/eventi.html"
       }
     ]
   }
@@ -600,6 +641,49 @@
       .nav-dropdown-menu a { color: white !important; text-align: center; font-family: var(--font-heading); font-size: 1.25rem; padding: 0; }
       .nav-dropdown-menu a:hover { background: none; color: white !important; opacity: 0.8; }
     }
+    /* ── Contenuto esteso "Prossimo evento" (Peace Walk) ── */
+    .ne-welcome { color: rgba(255,255,255,0.92); font-size: 1rem; margin-bottom: 16px; position: relative; z-index: 1; }
+    .ne-welcome a { color: #fff; text-decoration: underline; font-weight: 700; }
+    .next-event h3 { text-transform: uppercase; letter-spacing: 0.03em; }
+    .ne-info-line { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 4px 0 26px; font-size: 0.95rem; color: rgba(255,255,255,0.92); position: relative; z-index: 1; }
+    .ne-info-line span { display: inline-flex; align-items: center; gap: 7px; }
+    .ne-block-title { color: #fff; font-family: var(--font-heading); font-size: 1.25rem; margin: 0 0 14px; }
+    .ne-program { background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.18); border-radius: 14px; padding: 22px 24px; margin-bottom: 22px; position: relative; z-index: 1; }
+    .ne-program ul { list-style: none; margin: 0; padding: 0; }
+    .ne-program li { display: flex; flex-wrap: wrap; gap: 6px 16px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .ne-program li:last-child { border-bottom: none; }
+    .ne-t { flex: 0 0 auto; min-width: 96px; font-weight: 700; color: var(--secondary-green); font-size: 0.95rem; }
+    .ne-d { flex: 1 1 240px; color: rgba(255,255,255,0.92); font-size: 0.95rem; }
+    .ne-extra { margin-bottom: 22px; position: relative; z-index: 1; }
+    .ne-extra p { color: rgba(255,255,255,0.9); font-size: 0.95rem; margin-bottom: 8px; }
+    .ne-extra a { color: #fff; text-decoration: underline; font-weight: 700; }
+    .ne-extra strong, .ne-note strong { color: #fff; }
+    .ne-note { background: rgba(255,255,255,0.12); border-left: 4px solid var(--secondary-green); border-radius: 10px; padding: 14px 18px; margin-bottom: 24px; color: rgba(255,255,255,0.92); font-size: 0.95rem; position: relative; z-index: 1; }
+    .ne-closing { color: rgba(255,255,255,0.85); font-style: italic; text-align: center; margin: 24px 0 0; font-size: 1rem; position: relative; z-index: 1; }
+
+    /* ── Locandine Peace Walk: pannello a comparsa + lightbox dedicato ── */
+    #pwLocandine { display: none; }
+    #pwLocandine.open { display: block; animation: pwFade 0.35s var(--smooth-ease); }
+    @keyframes pwFade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .pw-locandina { cursor: zoom-in; transition: transform 0.25s var(--smooth-ease), box-shadow 0.25s var(--smooth-ease); }
+    .pw-locandina:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .pw-lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 3000; display: none; align-items: center; justify-content: center; padding: 30px; }
+    .pw-lightbox.active { display: flex; }
+    .pw-lightbox img { max-width: 92vw; max-height: 88vh; width: auto; height: auto; border-radius: 10px; box-shadow: 0 25px 70px rgba(0,0,0,0.5); transform-origin: center center; transition: transform 0.12s ease; cursor: zoom-in; }
+    .pw-lightbox-close { position: absolute; top: 22px; right: 26px; width: 46px; height: 46px; border: none; border-radius: 50%; background: rgba(255,255,255,0.15); color: #fff; font-size: 1.9rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s, transform 0.2s; }
+    .pw-lightbox-close:hover { background: var(--secondary-green); transform: scale(1.08); }
+    /* ── Menu mobile migliorato ── */
+    @media (max-width: 768px) {
+      .main-nav { justify-content: flex-start; padding: 106px 22px 48px; overflow-y: auto; }
+      .main-nav ul { gap: 20px; width: 100%; }
+      .main-nav > ul > li > a,
+      .nav-dropdown-toggle { font-size: 1.7rem; }
+      .nav-dropdown-menu { width: min(86%, 340px); margin-left: auto; margin-right: auto; background: rgba(0,0,0,0.16); border-radius: 16px; }
+      .nav-dropdown.open .nav-dropdown-menu { max-height: 620px; margin-top: 16px; padding: 6px 10px; transform: none !important; }
+      .nav-dropdown-menu li + li { margin-top: 0; border-top: 1px solid rgba(255,255,255,0.14); }
+      .nav-dropdown-menu a { font-size: 1.15rem !important; padding: 15px 8px !important; display: block; opacity: 0.92; }
+      .nav-dropdown-menu a.nav-partner-link { color: var(--secondary-green) !important; font-weight: 700; opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -621,6 +705,7 @@
               Scopri <span class="nav-dropdown-arrow" aria-hidden="true">▾</span>
             </button>
             <ul class="nav-dropdown-menu" id="navDropdownMenu">
+              <li><a href="peace-walk.html" class="nav-partner-link">Peace Walk</a></li>
               <li><a href="eventi.html">Eventi</a></li>
               <li><a href="#progetto">Chi siamo</a></li>
               <li><a href="#infopoint">Dove siamo</a></li>
@@ -655,8 +740,8 @@
   <!-- HERO -->
   <section class="hero" id="home" aria-labelledby="hero-title">
     <div class="hero-content">
-      <h1 id="hero-title">Il Parco della Pace</h1>
-      <p>Un bene comune a Vicenza: ricco di natura, sport, nonviolenza.</p>
+      <h1 id="hero-title">Il Parco della Pace di Vicenza</h1>
+      <p>Un grande bene comune a Vicenza: 65 ettari di natura, sport e nonviolenza.</p>
       <a href="#eventi" class="cta-button">Scopri i nostri eventi</a>
     </div>
   </section>
@@ -668,29 +753,12 @@
       <p class="section-intro hidden">Dall'inaugurazione ufficiale ai momenti storici che hanno definito il nostro percorso, scopri gli eventi che raccontano la storia e il futuro del Parco della Pace.</p>
 
       <!-- PROSSIMO EVENTO: Peace Walk -->
-      <div class="next-event hidden">
+      <div class="next-event hidden" style="text-align:center;">
         <span class="next-event-badge"><span aria-hidden="true">📢</span> Prossimo evento</span>
-        <h3>Peace Walk — Partenza italiana del cammino</h3>
-        <p class="next-event-sub">Sei invitato alla partenza italiana della Peace Walk. Rete Parco Pace e Casa per la Pace organizzano il tratto Vicenza–Venezia. Due appuntamenti al Parco della Pace.</p>
-        <div class="next-event-dates">
-          <div class="ne-date">
-            <div class="ne-day">Martedì 18 agosto 2026</div>
-            <div class="ne-time">ore 20.30</div>
-            <p class="ne-desc">Incontro pubblico con azione simbolica.</p>
-          </div>
-          <div class="ne-date">
-            <div class="ne-day">Mercoledì 19 agosto 2026</div>
-            <div class="ne-time">ore 7.30</div>
-            <p class="ne-desc">Partenza del cammino.</p>
-          </div>
-        </div>
-        <div class="next-event-meta">
-          <span><span aria-hidden="true">📍</span> Parco della Pace, Vicenza</span>
-          <span><span aria-hidden="true">🤝</span> Casa per la Pace &amp; Rete Parco Pace</span>
-        </div>
-        <div class="next-event-actions">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScHSCPZxeEhlUnzRHn5BEoUa44PyaTQ4Y7S91T_dzL2zcd7eA/viewform" target="_blank" rel="noopener noreferrer" class="cta-button">Iscriviti all'evento</a>
-          <a href="https://peacewalk.info/" target="_blank" rel="noopener noreferrer" class="cta-button ghost">Scopri la Peace Walk</a>
+        <h3 style="margin-bottom:14px;">Peace Walk 2026 — Disarmiamoci</h3>
+        <p class="next-event-sub" style="margin-left:auto; margin-right:auto;">Il cammino internazionale per la pace parte da Vicenza: evento di apertura il <strong>18 agosto</strong> al Parco della Pace, poi le tappe verso Venezia. Programma completo, locandine e iscrizioni nella pagina dedicata.</p>
+        <div class="next-event-actions" style="justify-content:center;">
+          <a href="peace-walk.html" class="cta-button">Scopri la Peace Walk</a>
         </div>
       </div>
 
@@ -789,13 +857,13 @@
     <div class="container">
       <div class="infopoint-layout hidden">
         <div class="infopoint-info">
-          <h2 id="h-infopoint">Vieni a trovarci: l'InfoPoint del Parco</h2>
-          <p>All'interno del Parco della Pace trovi il nostro InfoPoint, il punto di riferimento per informazioni, materiali e per conoscere da vicino le attività della rete.</p>
+          <h2 id="h-infopoint">Orari, dove siamo e come arrivare al Parco della Pace</h2>
+          <p>All'interno del Parco della Pace, a Vicenza, trovi il nostro InfoPoint: il punto di riferimento per orari, informazioni, materiali e per conoscere da vicino le attività della rete. Qui sotto trovi gli orari di apertura e come raggiungerci.</p>
           <ul class="infopoint-list">
-            <li><span class="ip-icon" aria-hidden="true">📍</span><span>Strada Sant'Antonino, 59 – 36100 Vicenza (VI)</span></li>
-            <li><span class="ip-icon" aria-hidden="true">🕒</span><span>Domenica: 08:00 – 18:00</span></li>
-            <li><span class="ip-icon" aria-hidden="true">☀️</span><span>Luglio e Agosto: 08:00 – 12:00<span class="infopoint-note">Chiuso in caso di caldo eccessivo</span></span></li>
-            <li><span class="ip-icon" aria-hidden="true">🚌</span><span>Come arrivarci: l'autobus linea 9 di SVT ferma a pochi passi dall'ingresso del parco</span></li>
+            <li><span class="ip-icon" aria-hidden="true">📍</span><span><strong>Dove siamo:</strong> Strada Sant'Antonino, 59 – 36100 Vicenza (VI)</span></li>
+            <li><span class="ip-icon" aria-hidden="true">🕒</span><span><strong>Orari di apertura:</strong> Domenica 08:00 – 18:00</span></li>
+            <li><span class="ip-icon" aria-hidden="true">☀️</span><span><strong>Orari estivi (luglio e agosto):</strong> 08:00 – 12:00<span class="infopoint-note">Chiuso in caso di caldo eccessivo</span></span></li>
+            <li><span class="ip-icon" aria-hidden="true">🚌</span><span><strong>Come arrivare:</strong> autobus linea 9 di SVT, fermata a pochi passi dall'ingresso del parco</span></li>
           </ul>
           <a href="https://www.google.com/maps/place/InfoPoint+Rete+Parco+Pace/@45.5714369,11.5337247,17z" target="_blank" rel="noopener noreferrer" class="cta-button">Indicazioni stradali</a>
         </div>
@@ -1009,6 +1077,42 @@
       document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
 
     });
+  </script>
+
+  <!-- LIGHTBOX LOCANDINE PEACE WALK -->
+  <div class="pw-lightbox" id="pwLightbox" role="dialog" aria-modal="true" aria-label="Locandina ingrandita">
+    <button class="pw-lightbox-close" id="pwLightboxClose" aria-label="Chiudi">×</button>
+    <img src="" alt="" id="pwLightboxImg" />
+  </div>
+  <script>
+    (function () {
+      var toggle = document.getElementById('pwLocandineToggle');
+      var panel  = document.getElementById('pwLocandine');
+      if (toggle && panel) {
+        toggle.addEventListener('click', function () {
+          var open = panel.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+          toggle.textContent = open ? 'Nascondi locandine' : 'Locandine evento';
+          if (open) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+      }
+      var lb = document.getElementById('pwLightbox');
+      var lbImg = document.getElementById('pwLightboxImg');
+      var lbClose = document.getElementById('pwLightboxClose');
+      if (!lb) return;
+      var scale = 1;
+      function setScale(s) { scale = Math.min(5, Math.max(1, s)); lbImg.style.transform = 'scale(' + scale + ')'; lbImg.style.cursor = scale > 1 ? 'zoom-out' : 'zoom-in'; }
+      function openLb(src, alt) { lbImg.src = src; lbImg.alt = alt; setScale(1); lb.classList.add('active'); document.body.style.overflow = 'hidden'; }
+      function closeLb() { lb.classList.remove('active'); lbImg.src = ''; setScale(1); document.body.style.overflow = ''; }
+      document.querySelectorAll('.pw-locandina').forEach(function (img) {
+        img.addEventListener('click', function () { openLb(img.src, img.alt); });
+        img.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLb(img.src, img.alt); } });
+      });
+      lbClose.addEventListener('click', closeLb);
+      lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+      lb.addEventListener('wheel', function (e) { if (!lb.classList.contains('active')) return; e.preventDefault(); setScale(scale + (e.deltaY < 0 ? 0.2 : -0.2)); }, { passive: false });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && lb.classList.contains('active')) closeLb(); });
+    })();
   </script>
 
 </body>
