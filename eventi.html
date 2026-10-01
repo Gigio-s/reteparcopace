@@ -90,7 +90,8 @@
           "price": "0",
           "priceCurrency": "EUR",
           "availability": "https://schema.org/InStock",
-          "url": "https://reteparcopace.it/sistema-letto.html"
+          "url": "https://reteparcopace.it/sistema-letto.html",
+          "validFrom": "2026-09-22"
         },
         "url": "https://reteparcopace.it/sistema-letto.html"
       }
@@ -267,11 +268,12 @@
     .section-intro { max-width: 750px; margin: 0 auto 60px; font-size: 1.1rem; text-align: center; line-height: 1.8; }
 
     /* Eventi — versione grande con foto cliccabili */
-    .events-grid-large { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    .events-grid-large { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+    @media (max-width: 992px) { .events-grid-large { grid-template-columns: repeat(2, 1fr); } }
     .event-card { background-color: white; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); transition: transform 0.3s var(--smooth-ease), box-shadow 0.3s var(--smooth-ease); text-align: left; }
     .event-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
     .event-photo-wrap { position: relative; overflow: hidden; }
-    .event-photo-wrap img { width: 100%; height: 320px; object-fit: cover; display: block; cursor: zoom-in; transition: transform 0.5s var(--smooth-ease); }
+    .event-photo-wrap img { width: 100%; height: 200px; object-fit: cover; display: block; cursor: zoom-in; transition: transform 0.5s var(--smooth-ease); }
     .event-photo-wrap:hover img { transform: scale(1.05); }
     .event-photo-zoom {
       position: absolute; bottom: 16px; right: 16px;
@@ -282,11 +284,15 @@
     }
     .event-photo-wrap:hover .event-photo-zoom,
     .event-photo-wrap:focus-within .event-photo-zoom { opacity: 1; }
-    .event-card-caption { padding: 32px 30px; }
-    .event-card-caption h4 { font-size: 1.7rem; }
-    .event-card-caption .date { font-size: 0.9rem; color: #888; margin-bottom: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
-    .event-card-caption p { font-size: 1rem; color: #555; }
+    .event-card-caption { padding: 20px 22px; }
+    .event-card-caption h4 { font-size: 1.32rem; line-height: 1.25; }
+    .event-card-caption .date { font-size: 0.8rem; color: #888; margin-bottom: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+    .event-card-caption p { font-size: 0.92rem; color: #555; line-height: 1.55; }
     .event-badge { display: inline-block; background: linear-gradient(135deg, var(--primary-green), var(--secondary-green)); color: white; font-size: 0.68rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.07em; }
+    .event-card-link { text-decoration: none; color: inherit; display: block; cursor: pointer; }
+    .event-card-link .event-photo-wrap img { cursor: pointer; }
+    .event-card-arrow { position: absolute; bottom: 14px; right: 14px; width: 36px; height: 36px; border-radius: 50%; background: var(--primary-green); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: var(--shadow-sm); transition: transform 0.25s var(--smooth-ease), background 0.25s; }
+    .event-card-link:hover .event-card-arrow { transform: translateX(3px); background: var(--secondary-green); }
 
     /* ── PROSSIMO EVENTO (banner in evidenza) ── */
     @keyframes badge-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(151,188,98,0.55); } 50% { box-shadow: 0 0 0 7px rgba(151,188,98,0); } }
@@ -580,27 +586,73 @@
       <h2 class="hidden" id="h-eventi">Tutti i nostri eventi</h2>
       <p class="section-intro hidden">Clicca su una foto per vederla più in grande.</p>
 
-      <!-- PROSSIMO EVENTO: Sistema Letto -->
+      <!-- EVENTO CONCLUSO: Sistema Letto -->
       <div class="next-event hidden" style="text-align:center;">
-        <span class="next-event-badge"><span aria-hidden="true">📅</span> Prossimo evento</span>
-        <h3 style="margin-bottom:14px;">Sistema Letto - Serata per il Parco</h3>
-        <p class="next-event-sub" style="margin-left:auto; margin-right:auto;">Luned&igrave; <strong>5 ottobre 2026</strong> alla Club House del Gobbato: una serata conviviale per aiutare Rete Parco Pace a crescere, con il concorso <strong>Vieni Vedi Vinci</strong> e una <strong>Fiat 500 Hybrid</strong> in palio. Nessun obbligo d'acquisto.</p>
+        <span class="next-event-badge"><span aria-hidden="true">🕊️</span> Evento concluso</span>
+        <h3 style="margin-bottom:14px;">Grazie a tutti!</h3>
+        <p class="next-event-sub" style="margin-left:auto; margin-right:auto;">La serata <strong>Sistema Letto</strong> del 5 ottobre si &egrave; conclusa: grazie a chi ha partecipato e sostenuto Rete Parco Pace.</p>
         <div class="next-event-actions" style="justify-content:center;">
-          <a href="sistema-letto.html" class="cta-button">Scopri l'evento</a>
+          <a href="sistema-letto.html" class="cta-button">Rivedi la serata</a>
         </div>
       </div>
 
       <div class="events-grid-large">
+        <a class="event-card event-card-link hidden" href="sistema-letto.html">
+          <div class="event-photo-wrap">
+            <img src="img/vieni-vedi-vinci-locandina.jpg" alt="Serata Sistema Letto a sostegno del Parco della Pace" loading="lazy" />
+            <span class="event-card-arrow" aria-hidden="true">&rarr;</span>
+          </div>
+          <div class="event-card-caption">
+            <span class="event-badge"><span aria-hidden="true">🕊️</span> Pagina dedicata</span>
+            <p class="date">5 ottobre 2026</p>
+            <h4>Serata Sistema Letto</h4>
+            <p>Una serata conviviale per sostenere il Parco della Pace. Grazie a chi ha partecipato.</p>
+          </div>
+        </a>
+        <a class="event-card event-card-link hidden" href="peace-walk.html">
+          <div class="event-photo-wrap">
+            <img src="img/peace-walk-hero-vicenza.jpg" alt="Peace Walk 2026 al Parco della Pace di Vicenza" loading="lazy" />
+            <span class="event-card-arrow" aria-hidden="true">&rarr;</span>
+          </div>
+          <div class="event-card-caption">
+            <span class="event-badge"><span aria-hidden="true">🕊️</span> Pagina dedicata</span>
+            <p class="date">18-22 agosto 2026</p>
+            <h4>Peace Walk 2026</h4>
+            <p>Il cammino internazionale per la pace è passato da Vicenza. Guarda il video e le foto nella pagina dedicata.</p>
+          </div>
+        </a>
         <div class="event-card hidden">
           <div class="event-photo-wrap">
-            <img class="event-photo" src="img/immagine%2027.jpg" alt="Grande Inaugurazione del Parco della Pace" tabindex="0" role="button" aria-label="Ingrandisci foto: Grande Inaugurazione del Parco" loading="eager" />
+            <img class="event-photo" src="img/immagine%2027.jpg" alt="Grande Inaugurazione del Parco della Pace" tabindex="0" role="button" aria-label="Ingrandisci foto: Grande Inaugurazione del Parco" loading="lazy" />
             <span class="event-photo-zoom" aria-hidden="true">🔍</span>
           </div>
           <div class="event-card-caption">
             <span class="event-badge" aria-label="Evento in evidenza"><span aria-hidden="true">⭐</span> Evento principale</span>
-            <p class="date">27 e 28 Settembre</p>
+            <p class="date">27 e 28 settembre 2025</p>
             <h4>Grande Inaugurazione del Parco</h4>
             <p>Due giorni di festa con sport, natura, musica e attività per tutti per aprire finalmente le porte del Parco alla città.</p>
+          </div>
+        </div>
+        <div class="event-card hidden">
+          <div class="event-photo-wrap">
+            <img class="event-photo" src="img/WhatsApp%20Image%202025-07-13%20at%2013.16.24%20(1).jpeg" alt="Nascita della Rete - novembre 2024" tabindex="0" role="button" aria-label="Ingrandisci foto: Nascita della rete" loading="lazy" />
+            <span class="event-photo-zoom" aria-hidden="true">🔍</span>
+          </div>
+          <div class="event-card-caption">
+            <p class="date">24 novembre 2024</p>
+            <h4>Nascita della rete</h4>
+            <p>Nascita formale della nostra rete di associazioni.</p>
+          </div>
+        </div>
+        <div class="event-card hidden">
+          <div class="event-photo-wrap">
+            <img class="event-photo" src="img/WhatsApp%20Image%202025-07-13%20at%2013.16.26%20(1).jpeg" alt="3a Marcia Mondiale per la Pace - giugno 2024" tabindex="0" role="button" aria-label="Ingrandisci foto: La marcia mondiale" loading="lazy" />
+            <span class="event-photo-zoom" aria-hidden="true">🔍</span>
+          </div>
+          <div class="event-card-caption">
+            <p class="date">Giugno 2024</p>
+            <h4>La marcia mondiale</h4>
+            <p>La rete ha collaborato al passaggio della "3ª Marcia Mondiale per la Pace e la Nonviolenza" al parco.</p>
           </div>
         </div>
         <div class="event-card hidden">
@@ -627,17 +679,6 @@
         </div>
         <div class="event-card hidden">
           <div class="event-photo-wrap">
-            <img class="event-photo" src="img/WhatsApp%20Image%202025-07-13%20at%2013.16.26%20(1).jpeg" alt="3a Marcia Mondiale per la Pace - giugno 2024" tabindex="0" role="button" aria-label="Ingrandisci foto: La marcia mondiale" loading="lazy" />
-            <span class="event-photo-zoom" aria-hidden="true">🔍</span>
-          </div>
-          <div class="event-card-caption">
-            <p class="date">Giugno 2024</p>
-            <h4>La marcia mondiale</h4>
-            <p>La rete ha collaborato al passaggio della "3ª Marcia Mondiale per la Pace e la Nonviolenza" al parco.</p>
-          </div>
-        </div>
-        <div class="event-card hidden">
-          <div class="event-photo-wrap">
             <img class="event-photo" src="img/WhatsApp%20Image%202025-07-13%20at%2013.16.25.jpeg" alt="Appello alla Nonviolenza con Scout CNGEI" tabindex="0" role="button" aria-label="Ingrandisci foto: Appello alla Nonviolenza" loading="lazy" />
             <span class="event-photo-zoom" aria-hidden="true">🔍</span>
           </div>
@@ -645,17 +686,6 @@
             <p class="date">Scout CNGEI</p>
             <h4>Appello alla Nonviolenza</h4>
             <p>Simbolo realizzato insieme agli scout CNGEI durante un torneo nazionale.</p>
-          </div>
-        </div>
-        <div class="event-card hidden">
-          <div class="event-photo-wrap">
-            <img class="event-photo" src="img/WhatsApp%20Image%202025-07-13%20at%2013.16.24%20(1).jpeg" alt="Nascita della Rete - novembre 2024" tabindex="0" role="button" aria-label="Ingrandisci foto: Nascita della rete" loading="lazy" />
-            <span class="event-photo-zoom" aria-hidden="true">🔍</span>
-          </div>
-          <div class="event-card-caption">
-            <p class="date">24 novembre 2024</p>
-            <h4>Nascita della rete</h4>
-            <p>Nascita formale della nostra rete di associazioni.</p>
           </div>
         </div>
       </div>
@@ -731,7 +761,7 @@
         </div>
       </div>
       <div class="footer-copyright">
-        <p>© 2025 Associazione Rete Parco Pace. Tutti i diritti riservati.</p>
+        <p>© 2026 Associazione Rete Parco Pace. Tutti i diritti riservati.</p>
         <p class="website-credit">
           Sito gestito da
           <a href="https://www.studiodigitalitalia.it" target="_blank" rel="noopener noreferrer">Studio Digital Italia</a>

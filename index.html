@@ -106,7 +106,8 @@
           "price": "0",
           "priceCurrency": "EUR",
           "availability": "https://schema.org/InStock",
-          "url": "https://reteparcopace.it/sistema-letto.html"
+          "url": "https://reteparcopace.it/sistema-letto.html",
+          "validFrom": "2026-09-22"
         },
         "url": "https://reteparcopace.it/sistema-letto.html"
       }
@@ -303,6 +304,10 @@
     .event-card-caption { padding: 30px 25px; }
     .event-card-caption h4 { font-size: 1.5rem; }
     .event-card-caption .date { font-size: 0.9rem; color: #888; margin-bottom: 10px; font-weight: 700; }
+    .event-card-link { text-decoration: none; color: inherit; display: block; }
+    .event-card-imgwrap { position: relative; overflow: hidden; }
+    .event-card-arrow { position: absolute; bottom: 14px; right: 14px; width: 36px; height: 36px; border-radius: 50%; background: var(--primary-green); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; box-shadow: var(--shadow-sm); transition: transform 0.25s var(--smooth-ease), background 0.25s; }
+    .event-card-link:hover .event-card-arrow { transform: translateX(3px); background: var(--secondary-green); }
     .event-badge { display: inline-block; background: linear-gradient(135deg, var(--primary-green), var(--secondary-green)); color: white; font-size: 0.68rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.07em; animation: badge-pulse 2.5s ease-in-out infinite; }
     @keyframes badge-pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(151,188,98,0.55); } 50% { box-shadow: 0 0 0 7px rgba(151,188,98,0); } }
 
@@ -753,40 +758,48 @@
       <h2 class="hidden" id="h-eventi">I Nostri Eventi</h2>
       <p class="section-intro hidden">Dall'inaugurazione ufficiale ai momenti storici che hanno definito il nostro percorso, scopri gli eventi che raccontano la storia e il futuro del Parco della Pace.</p>
 
-      <!-- PROSSIMO EVENTO: Sistema Letto -->
+      <!-- EVENTO CONCLUSO: Sistema Letto -->
       <div class="next-event hidden" style="text-align:center;">
-        <span class="next-event-badge"><span aria-hidden="true">📅</span> Prossimo evento</span>
-        <h3 style="margin-bottom:14px;">Sistema Letto - Serata per il Parco</h3>
-        <p class="next-event-sub" style="margin-left:auto; margin-right:auto;">Luned&igrave; <strong>5 ottobre 2026</strong> alla Club House del Gobbato: una serata conviviale per aiutare Rete Parco Pace a crescere, con il concorso <strong>Vieni Vedi Vinci</strong> e una <strong>Fiat 500 Hybrid</strong> in palio. Nessun obbligo d'acquisto.</p>
+        <span class="next-event-badge"><span aria-hidden="true">🕊️</span> Evento concluso</span>
+        <h3 style="margin-bottom:14px;">Grazie a tutti!</h3>
+        <p class="next-event-sub" style="margin-left:auto; margin-right:auto;">La serata <strong>Sistema Letto</strong> del 5 ottobre si &egrave; conclusa: grazie a chi ha partecipato e sostenuto Rete Parco Pace. In attesa del prossimo evento, dai un'occhiata a quelli passati.</p>
         <div class="next-event-actions" style="justify-content:center;">
-          <a href="sistema-letto.html" class="cta-button">Scopri l'evento</a>
+          <a href="eventi.html" class="cta-button">Guarda gli eventi passati</a>
         </div>
       </div>
 
       <div class="events-grid" id="eventsGrid">
+        <a class="event-card event-card-link hidden" href="sistema-letto.html">
+          <div class="event-card-imgwrap">
+            <img src="img/vieni-vedi-vinci-locandina.jpg" alt="Serata Sistema Letto a sostegno del Parco della Pace" width="600" height="220" loading="lazy" />
+            <span class="event-card-arrow" aria-hidden="true">&rarr;</span>
+          </div>
+          <div class="event-card-caption">
+            <span class="event-badge"><span aria-hidden="true">🕊️</span> Pagina dedicata</span>
+            <p class="date">5 ottobre 2026</p>
+            <h4>Serata Sistema Letto</h4>
+            <p>Una serata conviviale per sostenere il Parco della Pace. Grazie a chi ha partecipato.</p>
+          </div>
+        </a>
+        <a class="event-card event-card-link hidden" href="peace-walk.html">
+          <div class="event-card-imgwrap">
+            <img src="img/peace-walk-hero-vicenza.jpg" alt="Peace Walk 2026 al Parco della Pace di Vicenza" width="600" height="220" loading="lazy" />
+            <span class="event-card-arrow" aria-hidden="true">&rarr;</span>
+          </div>
+          <div class="event-card-caption">
+            <span class="event-badge"><span aria-hidden="true">🕊️</span> Pagina dedicata</span>
+            <p class="date">18-22 agosto 2026</p>
+            <h4>Peace Walk 2026</h4>
+            <p>Il cammino internazionale per la pace è passato da Vicenza. Guarda il video e le foto.</p>
+          </div>
+        </a>
         <div class="event-card hidden">
-          <img src="img/immagine%2027.jpg" alt="Grande Inaugurazione del Parco della Pace" width="600" height="220" loading="eager" />
+          <img src="img/immagine%2027.jpg" alt="Grande Inaugurazione del Parco della Pace" width="600" height="220" loading="lazy" />
           <div class="event-card-caption">
             <span class="event-badge" aria-label="Evento in evidenza"><span aria-hidden="true">⭐</span> Evento principale</span>
-            <p class="date">27 e 28 Settembre</p>
+            <p class="date">27 e 28 settembre 2025</p>
             <h4>Grande Inaugurazione del Parco</h4>
             <p>Due giorni di festa con sport, natura, musica e attività per tutti per aprire finalmente le porte del Parco alla città.</p>
-          </div>
-        </div>
-        <div class="event-card hidden">
-          <img src="img/WhatsApp%20Image%202025-07-13%20at%2013.16.21%20(1).jpeg" alt="Convegno Apriti Parco" width="600" height="220" loading="lazy" />
-          <div class="event-card-caption">
-            <p class="date">16 dicembre 2023</p>
-            <h4>Apriti parco</h4>
-            <p>Primo convegno organizzato dalla rete per immaginare il futuro del parco.</p>
-          </div>
-        </div>
-        <div class="event-card hidden">
-          <img src="img/WhatsApp%20Image%202025-07-13%20at%2013.16.22%20(1).jpeg" alt="Visita ai parchi di Milano" width="600" height="220" loading="lazy" />
-          <div class="event-card-caption">
-            <p class="date">Milano</p>
-            <h4>I parchi di Milano</h4>
-            <p>Ci siamo recati a Milano per confrontarci con le associazioni che gestiscono parchi analoghi al nostro.</p>
           </div>
         </div>
       </div>
@@ -926,7 +939,9 @@
         <a href="https://www.l2traslochi.it" target="_blank" rel="noopener noreferrer" class="sponsor-mini" aria-label="L2 Traslochi">
           <img src="img/logo-l2-traslochi.png" alt="L2 Traslochi" loading="lazy" />
         </a>
-        <div class="sponsor-mini sponsor-mini-empty hidden">Spazio disponibile</div>
+        <a href="https://autoscuolegasparellavicenza.it" target="_blank" rel="noopener noreferrer" class="sponsor-mini" aria-label="Autoscuole Gasparella">
+          <img src="img/logo-autoscuole-gasparella.jpg" alt="Autoscuole Gasparella" loading="lazy" />
+        </a>
         <div class="sponsor-mini sponsor-mini-empty hidden">Spazio disponibile</div>
         <div class="sponsor-mini sponsor-mini-empty hidden">Spazio disponibile</div>
         <div class="sponsor-mini sponsor-mini-empty hidden">Spazio disponibile</div>
@@ -980,7 +995,7 @@
         </div>
       </div>
       <div class="footer-copyright">
-        <p>© 2025 Associazione Rete Parco Pace. Tutti i diritti riservati.</p>
+        <p>© 2026 Associazione Rete Parco Pace. Tutti i diritti riservati.</p>
         <p class="website-credit">
           Sito gestito da
           <a href="https://www.studiodigitalitalia.it" target="_blank" rel="noopener noreferrer">Studio Digital Italia</a>
