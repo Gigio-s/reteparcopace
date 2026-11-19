@@ -425,7 +425,7 @@
     .footer-col .footer-links a:hover { color: white; transform: translateX(5px); }
     .footer-copyright { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #444; font-size: 0.9rem; color: #aaa; }
     .website-credit { margin-top: 8px; font-size: 0.85rem; color: #999; }
-    .website-credit a { color: var(--secondary-green); }
+    .website-credit a { color: #0099FF; }
     .website-credit a:hover { color: white; text-decoration: underline; }
 
     /* Animazioni */
@@ -576,9 +576,9 @@
       flex-wrap: wrap;
     }
     .studio-credit-bar span { font-size: 0.78rem; color: #777; }
-    .studio-credit-bar a { font-size: 0.78rem; color: #b7882c; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s; }
-    .studio-credit-bar a:hover { color: #f0c04a; }
-    .studio-credit-logo { height: 22px; }
+    .studio-credit-bar a { font-size: 0.78rem; color: #0099FF; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s; }
+    .studio-credit-bar a:hover { color: #ffffff; }
+    .studio-credit-logo { height: 22px; width: auto; display: block; }
 
     /* Responsive */
     @media (max-width: 1024px) {
@@ -745,6 +745,7 @@
             <ul class="nav-dropdown-menu" id="navDropdownMenu">
               <li><a href="peace-walk.html" class="nav-partner-link">Peace Walk</a></li>
               <li><a href="eventi.html">Eventi</a></li>
+              <li><a href="storia.html">La storia</a></li>
               <li><a href="#progetto">Chi siamo</a></li>
               <li><a href="#infopoint">Dove siamo</a></li>
               <li><a href="#documenti">Documenti</a></li>
@@ -784,15 +785,15 @@
     </div>
   </section>
 
-  <!-- SISTEMA LETTO: EVENTO CONCLUSO -->
-  <section class="content-section" id="sistema-letto-concluso" aria-labelledby="h-sistema-letto-concluso">
+  <!-- LA STORIA DEL PARCO (al posto del banner Sistema Letto, 19/11/2026) -->
+  <section class="content-section" id="storia-parco" aria-labelledby="h-storia-parco">
     <div class="container">
       <div class="next-event hidden" style="text-align:center; margin-bottom:0;">
-        <span class="next-event-badge"><span aria-hidden="true">🕊️</span> Evento concluso</span>
-        <h3 id="h-sistema-letto-concluso" style="margin-bottom:14px;">Serata Sistema Letto · 5 ottobre 2026</h3>
-        <p class="next-event-sub" style="margin-left:auto; margin-right:auto;">Evento concluso, grazie a chi ha partecipato.</p>
+        <span class="next-event-badge"><span aria-hidden="true">⏳</span> 1929 - 2026</span>
+        <h3 id="h-storia-parco" style="margin-bottom:14px;">La storia del Parco della Pace</h3>
+        <p class="next-event-sub" style="margin-left:auto; margin-right:auto;">Da pista militare a bene comune: l'aeroporto Dal Molin, una città che ha detto no e 65 ettari tornati alla cittadinanza. Scoprila con la cronologia interattiva e mettiti alla prova con il quiz.</p>
         <div class="next-event-actions" style="justify-content:center;">
-          <a href="sistema-letto.html" class="cta-button">Vai alla pagina dell'evento</a>
+          <a href="storia.html" class="cta-button">Scopri la storia</a>
         </div>
       </div>
     </div>
@@ -1053,14 +1054,17 @@
       </div>
 
       <div class="sponsor-mini-grid">
-        <a href="https://www.studiodigitalitalia.it" target="_blank" rel="noopener noreferrer" class="sponsor-mini" aria-label="Studio Digital Italia">
-          <img src="img/logo-studio-digital-italia.jpg" alt="Studio Digital Italia" loading="lazy" />
+        <a href="https://www.studiodigitalitalia.it" target="_blank" rel="noopener noreferrer" class="sponsor-mini" aria-label="studio dgtl">
+          <img src="img/logo-studio-dgtl.svg" alt="studio dgtl" loading="lazy" width="190" height="49" />
         </a>
         <a href="https://www.l2traslochi.it" target="_blank" rel="noopener noreferrer" class="sponsor-mini" aria-label="L2 Traslochi">
           <img src="img/logo-l2-traslochi.png" alt="L2 Traslochi" loading="lazy" />
         </a>
         <a href="https://autoscuolegasparellavicenza.it" target="_blank" rel="noopener noreferrer" class="sponsor-mini" aria-label="Autoscuole Gasparella">
           <img src="img/logo-autoscuole-gasparella.jpg" alt="Autoscuole Gasparella" loading="lazy" />
+        </a>
+        <a href="https://www.pizzeriadalello.it" target="_blank" rel="noopener noreferrer" class="sponsor-mini" aria-label="Pizzeria da Lello Le Fornaci">
+          <img src="img/logo-lello-le-fornaci.png" alt="Pizzeria da Lello Le Fornaci" loading="lazy" width="190" height="41" />
         </a>
         <div class="sponsor-mini sponsor-mini-empty hidden">Spazio disponibile</div>
         <div class="sponsor-mini sponsor-mini-empty hidden">Spazio disponibile</div>
@@ -1107,6 +1111,7 @@
           <h4>Link Utili</h4>
           <div class="footer-links">
             <a href="eventi.html">Eventi &amp; Storia</a>
+            <a href="storia.html">La storia del Parco</a>
             <a href="#progetto">Chi siamo</a>
             <a href="#infopoint">Dove siamo</a>
             <a href="#documenti">Documenti</a>
@@ -1118,23 +1123,16 @@
         <p>© 2026 Associazione Rete Parco Pace. Tutti i diritti riservati.</p>
         <p class="website-credit">
           Sito gestito da
-          <a href="https://www.studiodigitalitalia.it" target="_blank" rel="noopener noreferrer">Studio Digital Italia</a>
+          <a href="https://www.studiodigitalitalia.it" target="_blank" rel="noopener noreferrer">studio dgtl</a>
         </p>
       </div>
     </div>
   </footer>
 
-  <!-- Barra credito Studio Digital (sopra footer) -->
+  <!-- Barra credito studio dgtl (sopra footer) -->
   <div class="studio-credit-bar">
     <span>Sito progettato e mantenuto da</span>
-    <!-- Inline SVG mini logo -->
-    <svg height="20" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="18,2 32,10 32,28 18,36 4,28 4,10" fill="none" stroke="#b7882c" stroke-width="2"/>
-      <path d="M11,12 Q11,8 18,8 Q25,8 25,13 Q25,18 18,18 Q11,18 11,23 Q11,28 18,28 Q25,28 25,24" fill="none" stroke="#b7882c" stroke-width="2.2" stroke-linecap="round"/>
-      <text x="40" y="26" font-family="Georgia,serif" font-size="16" font-weight="700" fill="white">Studio</text>
-      <text x="100" y="26" font-family="Georgia,serif" font-size="16" fill="#b7882c">/</text>
-      <text x="111" y="26" font-family="Georgia,serif" font-size="16" font-weight="700" fill="white">Digital</text>
-    </svg>
+    <a href="https://www.studiodigitalitalia.it" target="_blank" rel="noopener noreferrer" class="studio-credit-logo-link" aria-label="studio dgtl"><img class="studio-credit-logo" src="img/logo-studio-dgtl-bianco.svg" alt="studio dgtl" width="86" height="22"></a>
     <a href="https://www.studiodigitalitalia.it" target="_blank" rel="noopener noreferrer">studiodigitalitalia.it ↗</a>
   </div>
 
